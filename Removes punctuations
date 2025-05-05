@@ -1,0 +1,8 @@
+import string
+def remove_punctuation(sentence):
+	translator = str.maketrans('','', string.punctuation)
+	modified_sentence = sentence.translate(translator)
+	return modified_sentence
+input_sentence = input()
+modified_sentence = remove_punctuation(input_sentence)
+print(modified_sentence.replace(" "," "))
