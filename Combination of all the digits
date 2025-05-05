@@ -1,0 +1,16 @@
+import itertools
+def generate_combinations(digit1,digit2,digit3):
+	digits = [digit1,digit2,digit3]
+	for combination in itertools.permutations(digits):
+		print("".join(combination))
+
+try:
+	digit1 = int(input("digit1 (0-9): "))
+	digit2 = int(input("digit2 (0-9): "))
+	digit3 = int(input("digit3 (0-9): "))
+	if 0 <= digit1 <= 9 and 0 <= digit2 <= 9 and 0 <= digit3 <= 9:
+		generate_combinations(str(digit1), str(digit2), str(digit3))
+	else:
+		print("Invalid")
+except ValueError:
+	print("Invalid")
